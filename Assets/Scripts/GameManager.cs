@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour {
 
@@ -9,15 +9,15 @@ public class GameManager : MonoBehaviour {
 	public static GameManager gm;
 
 	// public variables
-	public int score=0;
+	public int score = 0;
 
 	public bool canBeatLevel = false;
-	public int beatLevelScore=0;
+	public int beatLevelScore = 0;
 
-	public float startTime=5.0f;
+	public float startTime = 5.0f;
 	
-	public Text mainScoreDisplay;
-	public Text mainTimerDisplay;
+	public TMP_Text mainScoreDisplay;
+	public TMP_Text mainTimerDisplay;
 
 	public GameObject gameOverScoreOutline;
 

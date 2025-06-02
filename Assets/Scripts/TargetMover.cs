@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class TargetMover : MonoBehaviour {
 
@@ -17,7 +16,7 @@ public class TargetMover : MonoBehaviour {
 	void Update () {
 
 		// do the appropriate motion based on the motionState
-		switch(motionState) {
+		switch (motionState) {
 			case motionDirections.Spin:
 				// rotate around the up axix of the gameObject
 				gameObject.transform.Rotate (Vector3.up * spinSpeed * Time.deltaTime);

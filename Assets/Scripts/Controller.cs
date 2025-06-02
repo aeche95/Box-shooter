@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class Controller : MonoBehaviour {
 	
@@ -20,10 +19,10 @@ public class Controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// Determine how much should move in the z-direction
-		Vector3 movementZ = Input.GetAxis("Vertical") * Vector3.forward * moveSpeed * Time.deltaTime;
+		Vector3 movementZ = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime * Vector3.forward;
 
 		// Determine how much should move in the x-direction
-		Vector3 movementX = Input.GetAxis("Horizontal") * Vector3.right * moveSpeed * Time.deltaTime;
+		Vector3 movementX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime * Vector3.right;
 
 		// Convert combined Vector3 from local space to world space based on the position of the current gameobject (player)
 		Vector3 movement = transform.TransformDirection(movementZ+movementX);
